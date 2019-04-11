@@ -14,7 +14,7 @@
     <meta property="og:title" content="Disboard competitive esports team - coming soon" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://disboard.team/" />
-    <meta property="og:image" content="https://mariokartworld.com/assets/img/ngnl_ico2.png" />
+    <meta property="og:image" content="https://disboard.team/assets/img/ngnl_ico2.png" />
     <meta property="og:description" content="Disboard competitive esports team - coming soon" />
 
     <link rel="stylesheet" type="text/css" href="assets/css/b.min.css">
@@ -36,10 +36,7 @@
 
 <body>
 
-    <div class="container">
-        <canvas id="myChart"></canvas>
-    </div>
-<!--
+
     <section class="overlay">
         <section class="overlay-inner">
 
@@ -72,66 +69,7 @@
         </section>
 
     </section>
--->
-    <script>
-        let myChart = document.getElementById('myChart').getContext('2d');
-
-        // Global Options
-        Chart.defaults.global.defaultFontFamily = 'Lato';
-        Chart.defaults.global.defaultFontSize = 18;
-        Chart.defaults.global.defaultFontColor = '#777';
-
-        let massPopChart = new Chart(myChart, {
-            type:'pie', // bar, horizontal, pie, line, goughnut, radar, polarArea
-            data:{
-                labels:['Boston', 'Worcester', 'Springfield', 'Lowell', 'Cambridge', 'New Bedford'],
-                datasets:[{
-                    label:'Population',
-                    data:[
-                        423423,
-                        2342342,
-                        234234,
-                        12314,
-                        124155,
-                        2133123
-                    ],
-                    //backgroundColor:'green',
-                    backgroundColor:[
-                    '#00ff33',
-                    '#003333',
-                    '#0033ff',
-                    '#330033',
-                    '#12g633',
-                    '#012333'
-                    ],
-                    borderWidth: 4,
-                    borderColor:'#777'
-                }]
-            },
-            options:{
-                title:{
-                    display: true,
-                    text: 'Largest CIties in Massachusetts',
-                    fontSize: 25
-                },
-                legend:{
-                    position:'right'
-                },
-                layout:{
-                    padding:{
-                        left: 50,
-                        right:0,
-                        bottom:0,
-                        top:0
-                    }
-                },
-                tooltips:{
-                    enabled: true
-                }
-            }
-        });
-    </script>
-
+    
     <script type="text/javascript" src="assets/js/jquery.min.js"></script>
     <script type="text/javascript" src="assets/js/b.min.js"></script>
 
