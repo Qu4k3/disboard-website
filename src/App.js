@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import {Menu} from './components/Menu'
+import {Footer} from './components/Footer'
 import logo from './logo.svg';
 import './App.css';
 
