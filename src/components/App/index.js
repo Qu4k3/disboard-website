@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-//import {Menu} from './components/Menu'
-//import {Footer} from './components/Footer'
-import logo from './logo.svg';
-import './App.css';
+//import {Nav} from './Nav'
+//import {Footer} from './Footer'
+import logo from '../../images/logo.svg';
+import './style.css';
 
 class App extends Component {
   render() {
@@ -13,14 +13,7 @@ class App extends Component {
           <p>
             Edit <code>src/App.js</code> and save to reload.
           </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
+          <a className="App-link" href="https://reactjs.org" target="_blank" rel="noopener noreferrer">Learn React</a>
         </header>
       </div>
     );
