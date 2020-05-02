@@ -1,8 +1,11 @@
 import React, { Component } from 'react';
-//import {Nav} from './Nav'
-//import {Footer} from './Footer'
-import logo from '../../images/logo.svg';
-import './style.css';
+import logo from './images/logo.svg';
+import './App.css';
+
+import { faDiscord } from '@fortawesome/free-brands-svg-icons';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
+import { About } from './pages/About';
 
 class App extends Component {
   render() {
@@ -10,6 +13,7 @@ class App extends Component {
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
+          <FontAwesomeIcon icon={faDiscord} />
           <p>
             Edit <code>src/App.js</code> and save to reload.
           </p>
