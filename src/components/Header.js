@@ -1,10 +1,11 @@
 import React, {Component} from 'react'
 
 import GlobalNav from './GlobalNav'
-import SocialNav from './SocialNav';
-import { Link } from 'react-router-dom';
+import SocialNav from './SocialNav'
+import { Link } from 'react-router-dom'
 
-const year = new Date().getFullYear();
+import logo from '../images/logo.png'
+
 
 export default class Header extends Component {
     render () {
@@ -13,7 +14,7 @@ export default class Header extends Component {
                 <div class="inner">
                     <section class="logo">
                         <Link to={'/'}>
-                            <img src="assets/img/logo.png" alt="ノーゲーム・ノーライフ ゼロ" />
+                            <img src={logo} alt="ノーゲーム・ノーライフ ゼロ" />
                         </Link>
                     </section>
 

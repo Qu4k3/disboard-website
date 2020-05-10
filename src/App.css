@@ -1,33 +1,507 @@
-.App {
+* {
+  margin: 0;
+  padding: 0;
+  -o-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  margin: 0 auto;
+  font-family: "Lato", sans-serif;
+  /*font-family: "ヒラギノ角ゴ Pro W3", Hiragino Kaku Gothic Pro, "メイリオ",
+    Meiryo, Osaka, "ＭＳ Ｐゴシック", MS PGothic, sans-serif;
+  */
+  background-color: #151515;
+  background: url(./images/bg_2.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  z-index: -2;
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: -1;
+}
+
+body::-webkit-scrollbar {
+  width: 8px;
+  background-color: rgba(191, 19, 117, 0.6);
+}
+
+body::-webkit-scrollbar-corner {
+  background-color: rgba(191, 19, 117, 0.6);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: rgba(191, 19, 117, 0.6);
+}
+
+body::-webkit-scrollbar-track {
+  background-color: #050707;
+}
+
+body::-webkit-scrollbar-track-piece {
+  background-color: #050707;
+}
+
+.text-btn {
+  position: relative;
+}
+
+.text-btn a:after {
+  content: "";
+  width: 5px;
+  height: 5px;
+  border-top: 1px solid #fff;
+  border-right: 1px solid #fff;
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  -ms-transform: translate(0, -50%) rotate(45deg);
+  transform: translate(0, -50%) rotate(45deg);
+}
+
+@media only screen and (max-width: 767px) {
+  .text-btn a:after {
+    content: "";
+    width: 2%;
+    padding: 2% 0 0;
+    border-top: 1px solid #fff;
+    border-right: 1px solid #fff;
+    position: absolute;
+    top: 50%;
+    right: 3%;
+    -ms-transform: translate(0, -50%) rotate(45deg);
+    transform: translate(0, -50%) rotate(45deg);
+  }
+}
+
+.login a {
+  padding: 8px 28px 10px 15px;
+  background-color: rgba(191, 19, 117, 0.6);
+  color: #fff;
+  margin-top: 3px;
+  display: inline-block;
+  font-size: 16px;
+  line-height: 16px;
+  transition: 0.3s;
+}
+
+.login a i {
+  margin-right: 5px;
+  font-size: 18px;
+}
+
+.login a:hover {
+  background-color: rgba(191, 19, 117, 0.8);
+}
+
+a {
+  outline: none;
+}
+a:link {
+  text-decoration: none;
+}
+
+.clearfix:after,
+header .inner:after,
+header .inner .social-navi:after,
+header .inner .global-navi:after,
+.parts-news .news-list:after,
+footer .inner:after,
+footer .inner .global-navi:after,
+footer .inner .social-navi:after {
+  display: block;
+  clear: both;
+  content: "";
+}
+.wrapper {
+  position: relative;
+}
+
+header {
+  width: 100%;
+  background: linear-gradient(to bottom, black 0, transparent 100%);
+  top: 0;
+  z-index: 1;
+}
+header .inner {
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 20px 50px 12px;
+  position: relative;
+}
+header .inner .logo {
+  width: 120px;
+  display: inline-block;
+}
+
+header .inner .global-navi {
+  float: right;
+  margin-right: 40px;
+}
+
+header .inner .social-navi {
+  float: right;
+  margin-right: 40px;
+  padding-top: 2px;
+}
+
+header .inner .login {
+  float: right;
+}
+
+header .inner .logo img {
+  width: 120px;
+}
+
+header .inner .social-navi ul li {
+  display: inline-block;
+}
+
+header .inner .social-navi ul li a {
+  display: inline-block;
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+header .inner .social-navi ul li a img {
+  max-height: 35px;
+  transition: 0.3s;
+}
+header .inner .social-navi ul li a:hover img {
+  opacity: 0.6;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+header .inner .social-navi ul li a i {
+  text-align: center;
+  margin: 0 auto;
+}
+header .inner .social-navi ul li:not(:last-child) {
+  margin-right: 8px;
 }
 
-.App-link {
-  color: #61dafb;
+header .inner .global-navi ul li {
+  float: left;
+  list-style: none;
+  position: relative;
+}
+header .inner .global-navi ul li a {
+  color: #fff;
+  position: relative;
+  display: block;
+}
+header .inner .global-navi ul li a p {
+  font-size: 17px;
+  font-size: 1.7rem;
+  letter-spacing: 1px;
+  position: relative;
+  opacity: 0.5;
+  font-family: PT Serif, serif;
+}
+header .inner .global-navi ul li a p span {
+  font-size: 10px;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  font-family: "ヒラギノ角ゴ Pro W3", Hiragino Kaku Gothic Pro, "メイリオ",
+    Meiryo, Osaka, "ＭＳ Ｐゴシック", MS PGothic, sans-serif;
+}
+header .inner .global-navi ul li a[href]:before {
+  content: "";
+  width: 0;
+  height: 24px;
+  background: rgba(191, 19, 117, 0.6);
+  position: absolute;
+  top: -2.5px;
+  left: -7px;
+  transition: 0.3s;
+}
+header .inner .global-navi ul li a[href]:hover:before {
+  width: calc(100% + 14px);
+}
+header .inner .global-navi ul li a[href] p {
+  opacity: 1;
+}
+header .inner .global-navi ul li:not(:first-child) {
+  margin: 0 0 0 60px;
+  margin: 0 0 0 50px;
+}
+header .inner .global-navi ul li:nth-child(8) {
+  margin: 20px 0 0;
+  clear: both;
+}
+header .inner .global-navi ul li:not(:first-child):before {
+  content: "";
+  width: 1px;
+  height: 36px;
+  background: rgba(255, 255, 255, 0.5);
+  position: absolute;
+  top: 0;
+  left: -30px;
+  -ms-transform: rotate(30deg);
+  transform: rotate(30deg);
+}
+header .inner .global-navi ul .current a[href]:before {
+  content: "";
+  width: calc(100% + 14px);
+  height: 24px;
+  background: rgba(191, 19, 117, 0.6);
+  position: absolute;
+  top: -2.5px;
+  left: -7px;
+  transition: 0.3s;
+}
+header .inner .global-navi ul li + li {
+  margin: 20px 0 0 60px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+main {
+  height: 900px;
+}
+
+footer {
+  width: 100%;
+  background: #050707;
+  position: relative;
+}
+footer:before {
+  content: "";
+  width: 100%;
+  height: 107px;
+  margin: 0 auto;
+  background: url(./images/bg.png) 50% 0 no-repeat;
+  position: absolute;
+  top: -59px;
+  right: 0;
+  left: 0;
+}
+footer .inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 82px 50px 25px;
+  position: relative;
+  text-align: center;
+}
+
+footer .inner .global-navi {
+  margin: 0;
+  display: inline-block;
+}
+footer .inner .global-navi ul li {
+  float: left;
+  list-style: none;
+  position: relative;
+}
+footer .inner .global-navi ul li a {
+  color: #fff;
+  position: relative;
+  display: block;
+}
+footer .inner .global-navi ul li a p {
+  font-size: 17px;
+  font-size: 1.8rem;
+  letter-spacing: 1px;
+  position: relative;
+  text-align: left;
+  opacity: 0.5;
+  font-family: PT Serif, serif;
+}
+footer .inner .global-navi ul li a p span {
+  font-size: 10px;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  font-family: "ヒラギノ角ゴ Pro W3", Hiragino Kaku Gothic Pro, "メイリオ",
+    Meiryo, Osaka, "ＭＳ Ｐゴシック", MS PGothic, sans-serif;
+}
+footer .inner .global-navi ul li a[href]:before {
+  content: "";
+  width: 0;
+  height: 24px;
+  background: rgba(191, 19, 117, 0.6);
+  position: absolute;
+  top: -2.5px;
+  left: -7px;
+  transition: 0.3s;
+}
+footer .inner .global-navi ul li a[href]:hover:before {
+  width: calc(100% + 14px);
+}
+footer .inner .global-navi ul li a[href] p {
+  opacity: 1;
+}
+footer .inner .global-navi ul li:not(:first-child) {
+  margin: 0 0 0 60px;
+}
+footer .inner .global-navi ul li:not(:first-child):before {
+  content: "";
+  width: 1px;
+  height: 36px;
+  background: rgba(255, 255, 255, 0.5);
+  position: absolute;
+  top: 0;
+  left: -30px;
+  -ms-transform: rotate(30deg);
+  transform: rotate(30deg);
+}
+footer .inner .global-navi ul .current a[href]:before {
+  content: "";
+  width: calc(100% + 14px);
+  height: 24px;
+  background: rgba(191, 19, 117, 0.6);
+  position: absolute;
+  top: -2.5px;
+  left: -7px;
+  transition: 0.3s;
+}
+footer .inner .global-navi ul li + li {
+  margin: 20px 0 0 60px;
+}
+footer .inner .social-navi {
+  display: block;
+  margin-top: 20px;
+}
+footer .inner .social-navi ul li {
+  display: inline-block;
+}
+footer .inner .social-navi ul li a img {
+  max-height: 35px;
+  transition: 0.3s;
+}
+
+footer .inner .social-navi ul li:not(:last-child) {
+  margin-right: 8px;
+}
+footer .inner .social-navi ul li a:hover img {
+  opacity: 0.6;
+}
+
+footer .inner .copyright {
+  display: block;
+  margin: 25px 0 0 0;
+  color: #fff;
+  font-size: 12px;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+}
+
+.back-to-top {
+  display: block;
+  bottom: 20px;
+  right: 20px;
+  position: fixed;
+  z-index: 3;
+  height: 60px;
+  width: 60px;
+}
+
+@media only screen and (max-width: 912px) {
+  header .inner .global-navi,
+  header .inner .login {
+    display: none;
   }
-  to {
-    transform: rotate(360deg);
+
+  header .inner .global-navi-trigger {
+    width: 40px;
+    height: 40px;
+    margin: 0;
+    z-index: 1;
+    float: right;
+    position: relative;
+  }
+
+  header .inner {
+    width: 100%;
+    margin: 0 auto;
+    padding: 10px 3% 15px;
+    position: relative;
+  }
+  header .inner .global-navi-trigger span {
+    width: 28px;
+    height: 2px;
+    margin: 0 auto;
+    display: inline-block;
+    transition: 0.4s;
+    box-sizing: border-box;
+    position: absolute;
+    right: 0;
+    left: 0;
+    background-color: #fff;
+  }
+
+  header .inner .global-navi-trigger span:nth-of-type(1) {
+    top: 25%;
+  }
+  header .inner .global-navi-trigger span:nth-of-type(2) {
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+  header .inner .global-navi-trigger span:nth-of-type(3) {
+    bottom: 25%;
+  }
+}
+
+@media only screen and (min-width: 913px) {
+  .sp_b {
+    display: none !important;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .sp_b {
+    display: block;
+  }
+  * {
+    -o-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  footer .inner {
+    width: 100%;
+    margin: 0 auto;
+    padding: 10% 0 15%;
+    position: relative;
+  }
+  footer .inner .global-navi ul li:not(:first-child) {
+    margin: auto;
+  }
+  footer .inner .global-navi {
+    width: 87.5%;
+    margin: 6% auto 6%;
+  }
+  footer .inner .global-navi ul li {
+    width: 50%;
+    padding: 0;
+    float: left;
+    list-style: none;
+    position: relative;
+  }
+  footer .inner .global-navi ul li:nth-child(2) {
+    margin: 0 !important;
+  }
+  footer .inner .global-navi ul li + li {
+    margin: 5% 0 0 !important;
+  }
+  footer .inner .global-navi ul li:not(:first-child):before {
+    display: none;
+  }
+  footer .inner .global-navi ul li a {
+    color: #fff;
+    position: relative;
+    display: inline-block;
   }
 }

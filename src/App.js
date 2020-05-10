@@ -11,11 +11,14 @@ import { NotFound } from './pages/NotFound';
 import { BackToTop } from './components/BackToTop';
 
 import './App.css';
+import Footer from './components/Footer';
+import Header from './components/Header';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
+        <Header />
         <Switch>
           <Route exact path="/" component={Home}/>
           <Route exact path="/about/" component={About}/>
@@ -25,6 +28,7 @@ class App extends Component {
           <Route path="/player/:playerId" component={Player}/>
           <Route component={NotFound} />
         </Switch>
+        <Footer />
         <BackToTop/>
       </div>
     );
