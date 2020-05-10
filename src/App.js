@@ -1,24 +1,31 @@
 import React, { Component } from 'react';
-import logo from './images/logo.svg';
-import './App.css';
+import { Switch, Route } from 'react-router-dom';
 
-import { faDiscord } from '@fortawesome/free-brands-svg-icons';
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
+import { Home } from './pages/Home';
 import { About } from './pages/About';
+import { Wars } from './pages/Wars';
+import { War } from './pages/War';
+import { Players } from './pages/Players';
+import { Player } from './pages/Player';
+import { NotFound } from './pages/NotFound';
+import { BackToTop } from './components/BackToTop';
+
+import './App.css';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <FontAwesomeIcon icon={faDiscord} />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a className="App-link" href="https://reactjs.org" target="_blank" rel="noopener noreferrer">Learn React</a>
-        </header>
+        <Switch>
+          <Route exact path="/" component={Home}/>
+          <Route exact path="/about/" component={About}/>
+          <Route exact path="/wars/" component={Wars}/>
+          <Route path="/war/:warId" component={War}/>
+          <Route exact path="/players/" component={Players}/>
+          <Route path="/player/:playerId" component={Player}/>
+          <Route component={NotFound} />
+        </Switch>
+        <BackToTop/>
       </div>
     );
   }
