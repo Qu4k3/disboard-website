@@ -1,16 +1,14 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 
-import { faDiscord } from '@fortawesome/free-brands-svg-icons'
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faDiscord } from '@fortawesome/free-brands-svg-icons';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-import Footer from '../components/Footer'
+import logo from '../images/logo.svg';
 
-import logo from '../images/logo.svg'
-
-export default class Home extends Component {
+export class Wars extends Component {
     render() {
         return (
-            <div>
+            <div className="App">
             <header className="App-header">
                 <img src={logo} className="App-logo" alt="logo" />
                 <FontAwesomeIcon icon={faDiscord} />
@@ -19,10 +17,9 @@ export default class Home extends Component {
                 </p>
                 <a className="App-link" href="https://reactjs.org" target="_blank" rel="noopener noreferrer">Learn React</a>
             </header>
-            <Footer />
             </div>
         );
     }
 }
 
-export default Home
+export default Wars;
