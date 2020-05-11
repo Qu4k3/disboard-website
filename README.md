@@ -27,10 +27,10 @@ npm install
 > runs the app in development mode
 
 ```shell
-npm start
+npm run dev
 ```
 
-You will then be able to access it at localhost:3000
+You will then be able to access it at [http://localhost:3000](http://localhost:3000)
 
 > builds the app for production to the build folder
 
