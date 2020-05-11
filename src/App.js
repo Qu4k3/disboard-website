@@ -19,7 +19,7 @@ import './styles/main.scss';
 class App extends Component {
   render() {
     return (
-      <div>
+      <div id="wrapper">
         <Header />
         <main id="main" class="main">
           <Switch>

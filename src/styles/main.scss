@@ -1,13 +1,13 @@
 @import 'utils/variables';
 
-@import 'base/base';
+@import 'base/global';
 @import 'base/color';
 @import 'base/typography';
 
 @import 'layout/navigation';
 @import 'layout/grid';
+@import 'layout/article';
 @import 'layout/header';
-@import 'layout/main';
 @import 'layout/footer';
 @import 'layout/forms';
 

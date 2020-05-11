@@ -3,9 +3,9 @@ import React, { Component } from 'react'
 export class Home extends Component {
     render() {
         return (
-            <div style={{height: '800px'}}>
-            
-            </div>
+            <section class="contents" style={{height: "900px"}}>
+                
+            </section>
         );
     }
 }
