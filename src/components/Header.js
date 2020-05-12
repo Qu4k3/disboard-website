@@ -4,8 +4,7 @@ import GlobalNav from './GlobalNav'
 import SocialNav from './SocialNav'
 import { Link } from 'react-router-dom'
 
-import logo from '../images/logo.png'
-
+import logo from '../images/disboard-logo-alt.svg'
 
 export default class Header extends Component {
     render () {
@@ -14,7 +13,7 @@ export default class Header extends Component {
                 <div class="inner">
                     <section class="logo">
                         <Link to={'/'}>
-                            <img src={logo} alt="ノーゲーム・ノーライフ ゼロ" />
+                            <img src={logo} alt="Disboard logo" />
                         </Link>
                     </section>
 

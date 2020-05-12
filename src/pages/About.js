@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
 
+import SectionTile from '../components/SectionTitle'
+
 export class About extends Component {
     render () {
         return (
             <section class="contents">
-                <h2>EQUIPO<span>チーム</span></h2>
+                <SectionTile title="EQUIPO" alt="チーム" />
                 <article>
                     <div class="heading">
                         <h3>

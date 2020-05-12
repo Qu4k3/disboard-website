@@ -9,12 +9,12 @@ export default class SocialNav extends Component {
           <nav class="social-navi">
             <ul>
                 <li>
-                    <a class="twitter" href="https://twitter.com/DisboardTeam" target="_blank">
+                    <a class="twitter" href="https://twitter.com/DisboardTeam" target="_blank" rel="noopener noreferrer">
                         <img src={twitterIcon} alt="Twitter page" />
                     </a>
                 </li>
                 <li>
-                    <a class="discord" href="https://discord.gg/YmFtq7m" target="_blank">
+                    <a class="discord" href="https://discord.gg/YmFtq7m" target="_blank" rel="noopener noreferrer">
                         <img src={discordIcon} alt="Discord server" />
                     </a>
                 </li>

@@ -38,7 +38,6 @@ footer .inner .global-navi ul li a {
 }
 footer .inner .global-navi ul li a p {
   font-size: 17px;
-  font-size: 1.8rem;
   letter-spacing: 1px;
   position: relative;
   text-align: left;
@@ -47,7 +46,6 @@ footer .inner .global-navi ul li a p {
 }
 footer .inner .global-navi ul li a p span {
   font-size: 10px;
-  font-size: 1rem;
   letter-spacing: 1px;
   font-family: "ヒラギノ角ゴ Pro W3", Hiragino Kaku Gothic Pro, "メイリオ",
     Meiryo, Osaka, "ＭＳ Ｐゴシック", MS PGothic, sans-serif;
@@ -119,18 +117,18 @@ footer .inner .copyright {
   margin: 25px 0 0 0;
   color: #fff;
   font-size: 12px;
-  font-size: 1.2rem;
   letter-spacing: 1px;
+}
+
+@media only screen and (min-width: 962px) {
+  .sp_b {
+    display: none !important;
+  }
 }
 
 @media only screen and (max-width: 767px) {
   .sp_b {
     display: block;
-  }
-  * {
-    -o-box-sizing: border-box;
-    -ms-box-sizing: border-box;
-    box-sizing: border-box;
   }
   footer .inner {
     width: 100%;

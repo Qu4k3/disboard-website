@@ -3,180 +3,207 @@ header {
   background: linear-gradient(to bottom, black 0, transparent 100%);
   top: 0;
   z-index: 1;
-}
-header .inner {
-  width: 100%;
-  max-width: 1600px;
-  margin: 0 auto;
-  padding: 20px 50px 12px;
-  position: relative;
-}
-header .inner .logo {
-  width: 120px;
-  display: inline-block;
-}
 
-header .inner .global-navi {
-  float: right;
-  margin-right: 40px;
-}
-
-header .inner .social-navi {
-  float: right;
-  margin-right: 40px;
-  padding-top: 2px;
-}
-
-header .inner .login {
-  float: right;
-}
-
-header .inner .logo img {
-  width: 120px;
-}
-
-header .inner .social-navi ul li {
-  display: inline-block;
-}
-
-header .inner .social-navi ul li a {
-  display: inline-block;
-  text-align: center;
-}
-
-header .inner .social-navi ul li a img {
-  max-height: 35px;
-  transition: 0.3s;
-}
-header .inner .social-navi ul li a:hover img {
-  opacity: 0.6;
-}
-
-header .inner .social-navi ul li a i {
-  text-align: center;
-  margin: 0 auto;
-}
-header .inner .social-navi ul li:not(:last-child) {
-  margin-right: 8px;
-}
-
-header .inner .global-navi ul li {
-  float: left;
-  list-style: none;
-  position: relative;
-}
-header .inner .global-navi ul li a {
-  color: #fff;
-  position: relative;
-  display: block;
-}
-header .inner .global-navi ul li a p {
-  font-size: 17px;
-  font-size: 1.7rem;
-  letter-spacing: 1px;
-  position: relative;
-  opacity: 0.5;
-  font-family: PT Serif, serif;
-}
-header .inner .global-navi ul li a p span {
-  font-size: 10px;
-  font-size: 1rem;
-  letter-spacing: 1px;
-  font-family: "ヒラギノ角ゴ Pro W3", Hiragino Kaku Gothic Pro, "メイリオ",
-    Meiryo, Osaka, "ＭＳ Ｐゴシック", MS PGothic, sans-serif;
-}
-header .inner .global-navi ul li a[href]:before {
-  content: "";
-  width: 0;
-  height: 24px;
-  background: rgba(191, 19, 117, 0.6);
-  position: absolute;
-  top: -2.5px;
-  left: -7px;
-  transition: 0.3s;
-}
-header .inner .global-navi ul li a[href]:hover:before {
-  width: calc(100% + 14px);
-}
-header .inner .global-navi ul li a[href] p {
-  opacity: 1;
-}
-header .inner .global-navi ul li:not(:first-child) {
-  margin: 0 0 0 60px;
-  margin: 0 0 0 50px;
-}
-header .inner .global-navi ul li:nth-child(8) {
-  margin: 20px 0 0;
-  clear: both;
-}
-header .inner .global-navi ul li:not(:first-child):before {
-  content: "";
-  width: 1px;
-  height: 36px;
-  background: rgba(255, 255, 255, 0.5);
-  position: absolute;
-  top: 0;
-  left: -30px;
-  -ms-transform: rotate(30deg);
-  transform: rotate(30deg);
-}
-header .inner .global-navi ul .current a[href]:before {
-  content: "";
-  width: calc(100% + 14px);
-  height: 24px;
-  background: rgba(191, 19, 117, 0.6);
-  position: absolute;
-  top: -2.5px;
-  left: -7px;
-  transition: 0.3s;
-}
-header .inner .global-navi ul li + li {
-  margin: 20px 0 0 60px;
-}
-
-@media only screen and (max-width: 912px) {
-  header .inner .global-navi,
-  header .inner .login {
-    display: none;
-  }
-
-  header .inner .global-navi-trigger {
-    width: 40px;
-    height: 40px;
-    margin: 0;
-    z-index: 1;
-    float: right;
+  .inner {
+    width: 100%;
+    max-width: 1150px;
+    margin: 0 auto;
+    padding: 20px 20px 12px;
     position: relative;
-  }
 
+    .logo {
+      display: inline-block;
+    }
+
+    .global-navi {
+      float: right;
+      margin-right: 40px;
+    }
+
+    .social-navi {
+      float: right;
+      margin-right: 40px;
+      padding-top: 2px;
+    }
+
+    .login {
+      float: right;
+    }
+
+    .logo img {
+      height: 30px;
+    }
+
+    .social-navi ul li {
+      display: inline-block;
+
+      a {
+        display: inline-block;
+        text-align: center;
+
+        img {
+          max-height: 35px;
+          transition: 0.3s;
+        }
+
+        &:hover img {
+          opacity: 0.6;
+        }
+
+        i {
+          text-align: center;
+          margin: 0 auto;
+        }
+      }
+
+      &:not(:last-child) {
+        margin-right: 8px;
+      }
+    }
+
+    .global-navi ul {
+      li {
+        float: left;
+        list-style: none;
+        position: relative;
+
+        a {
+          color: #fff;
+          position: relative;
+          display: block;
+
+          p {
+            font-size: 17px;
+            letter-spacing: 1px;
+            position: relative;
+            opacity: 0.5;
+            font-family: PT Serif, serif;
+
+            span {
+              font-size: 10px;
+              letter-spacing: 1px;
+              font-family: "ヒラギノ角ゴ Pro W3", Hiragino Kaku Gothic Pro,
+                "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", MS PGothic,
+                sans-serif;
+            }
+          }
+
+          &[href] {
+            &:before {
+              content: "";
+              width: 0;
+              height: 24px;
+              background: rgba(191, 19, 117, 0.6);
+              position: absolute;
+              top: -2.5px;
+              left: -7px;
+              transition: 0.3s;
+            }
+
+            &:hover:before {
+              width: calc(100% + 14px);
+            }
+
+            p {
+              opacity: 1;
+            }
+          }
+        }
+
+        &:not(:first-child) {
+          margin: 0 0 0 60px;
+          margin: 0 0 0 50px;
+        }
+
+        &:nth-child(8) {
+          margin: 20px 0 0;
+          clear: both;
+        }
+
+        &:not(:first-child):before {
+          content: "";
+          width: 1px;
+          height: 36px;
+          background: rgba(255, 255, 255, 0.5);
+          position: absolute;
+          top: 0;
+          left: -30px;
+          -ms-transform: rotate(30deg);
+          transform: rotate(30deg);
+        }
+      }
+
+      .current a[href]:before {
+        content: "";
+        width: calc(100% + 14px);
+        height: 24px;
+        background: rgba(191, 19, 117, 0.6);
+        position: absolute;
+        top: -2.5px;
+        left: -7px;
+        transition: 0.3s;
+      }
+
+      li + li {
+        margin: 20px 0 0 60px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 961px) {
   header .inner {
     width: 100%;
     margin: 0 auto;
     padding: 10px 3% 15px;
     position: relative;
-  }
-  header .inner .global-navi-trigger span {
-    width: 28px;
-    height: 2px;
-    margin: 0 auto;
-    display: inline-block;
-    transition: 0.4s;
-    box-sizing: border-box;
-    position: absolute;
-    right: 0;
-    left: 0;
-    background-color: #fff;
-  }
+    .global-navi,
+    .login {
+      display: none;
+    }
 
-  header .inner .global-navi-trigger span:nth-of-type(1) {
-    top: 25%;
-  }
-  header .inner .global-navi-trigger span:nth-of-type(2) {
-    top: 50%;
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
-  }
-  header .inner .global-navi-trigger span:nth-of-type(3) {
-    bottom: 25%;
+    .global-navi-trigger {
+      width: 40px;
+      height: 40px;
+      margin: 0;
+      z-index: 1;
+      float: right;
+      position: relative;
+
+      span {
+        width: 28px;
+        height: 2px;
+        margin: 0 auto;
+        display: inline-block;
+        transition: 0.4s;
+        box-sizing: border-box;
+        position: absolute;
+        right: 0;
+        left: 0;
+        background-color: #fff;
+
+        &:nth-of-type(1) {
+          top: 25%;
+        }
+
+        &:nth-of-type(2) {
+          top: 50%;
+          -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+        }
+
+        &:nth-of-type(3) {
+          bottom: 25%;
+        }
+      }
+    }
+
+    .logo {
+      img {
+        height: 30px;
+        max-width: 180px;
+        margin-top: 5px;
+      }
+    }
   }
 }

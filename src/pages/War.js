@@ -1,10 +1,5 @@
 import React, { Component } from 'react';
 
-import { faDiscord } from '@fortawesome/free-brands-svg-icons';
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
-import logo from '../images/logo.svg';
-
 export class War extends Component {
     render() {
         return (
