@@ -1,4 +1,5 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
+import {Helmet} from 'react-helmet'
 
 import SectionTile from '../components/SectionTitle'
 
@@ -6,6 +7,13 @@ export class About extends Component {
     render () {
         return (
             <section class="contents">
+                <Helmet>
+                    <title>『 』 / Acerca del equipo</title>
+                    <meta name="description" content="Acerca del equipo" />
+
+                    <meta property="og:title" content="『 Disboard 』 / Acerca del equipo" />
+                    <meta property="og:description" content="Acerca del equipo" />
+                </Helmet>
                 <SectionTile title="EQUIPO" alt="チーム" />
                 <article>
                     <div class="heading">

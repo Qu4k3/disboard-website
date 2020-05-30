@@ -24,11 +24,11 @@ class App extends Component {
         <main id="main" class="main">
           <Switch>
             <Route exact path="/" component={Home}/>
-            <Route path="/about/" component={About}/>
-            <Route path="/wars/" component={Wars}/>
-            <Route path="/war/:warId" component={War}/>
-            <Route path="/players/" component={Players}/>
-            <Route path="/player/:playerId" component={Player}/>
+            <Route exact path="/about/" component={About}/>
+            <Route exact path="/wars/" component={Wars}/>
+            <Route exact path="/war/:warId" component={War}/>
+            <Route exact path="/players/" component={Players}/>
+            <Route exact path="/player/:playerId" component={Player}/>
             <Route component={NotFound} />
           </Switch>
         </main>
