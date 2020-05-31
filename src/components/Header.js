@@ -13,11 +13,11 @@ export default class Header extends Component {
                 <div class="inner">
                     <section class="logo">
                         <Link to={'/'}>
-                            <img src={logo} alt="Disboard logo" />
+                            <img className="img-responsive" src={logo} alt="Disboard logo" />
                         </Link>
                     </section>
 
-                    <div class="global-navi-trigger sp_b"><span></span><span></span><span></span></div>
+                    <div class="global-navi-trigger sp-b"><span></span><span></span><span></span></div>
                     
                     <section class="login text-btn">
                         <a href="/">Login via Discord</a>
