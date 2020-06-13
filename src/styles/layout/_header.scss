@@ -149,7 +149,7 @@ header {
   }
 }
 
-@media only screen and (max-width: 961px) {
+@media only screen and (max-width: 1000px) {
   header .inner {
     width: 100%;
     margin: 0 auto;
@@ -203,5 +203,17 @@ header {
         margin-top: 5px;
       }
     }
+  }
+}
+
+@media only screen and (min-width: 1001px) {
+  .sp-b {
+    display: none !important;
+  }
+}
+
+@media only screen and (max-width: 560px) {
+  header .inner .social-navi {
+    margin-right: 5px;
   }
 }

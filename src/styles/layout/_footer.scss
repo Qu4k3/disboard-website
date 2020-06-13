@@ -120,12 +120,6 @@ footer .inner .copyright {
   letter-spacing: 1px;
 }
 
-@media only screen and (min-width: 962px) {
-  .sp-b {
-    display: none !important;
-  }
-}
-
 @media only screen and (max-width: 767px) {
   .sp-b {
     display: block;
@@ -145,10 +139,11 @@ footer .inner .copyright {
   }
   footer .inner .global-navi ul li {
     width: 50%;
-    padding: 0;
+    padding: 0 0 0 12.5%;
     float: left;
     list-style: none;
     position: relative;
+    text-align: left;
   }
   footer .inner .global-navi ul li:nth-child(2) {
     margin: 0 !important;

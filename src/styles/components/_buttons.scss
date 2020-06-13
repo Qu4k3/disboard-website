@@ -49,3 +49,24 @@
 .login a:hover {
   background-color: rgba(191, 19, 117, 0.8);
 }
+
+.detail .text-btn {
+  margin: 0 auto;
+}
+
+.detail .text-btn a {
+  width: 320px;
+  margin: 0 auto;
+  padding: 30px 0;
+  display: block;
+  font-size: 16px;
+  color: #fff;
+  text-align: center;
+  background: rgba(191,19,117,.6);
+  position: relative;
+  transition: .3s;
+
+  &:hover {
+    background-color: $bg-color-elements-hovered;
+  }
+}

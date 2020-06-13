@@ -22,6 +22,7 @@
         }
       }
       .detail {
+        margin-bottom: 40px;
         p {
           font-size: $article-p;
           color: #fff;
@@ -29,6 +30,12 @@
           font-weight: 400;
           text-align: justify;
           margin: 0 0 15px;
+        }
+        &.flex-container {
+            display: flex;
+            flex-flow: row wrap;
+            align-content: flex-start;
+            justify-content: flex-start;
         }
       }
     }
