@@ -21,7 +21,7 @@ class App extends Component {
     return (
       <div id="wrapper">
         <Header />
-        <main id="main" class="main">
+        <main id="main" className="main">
           <Switch>
             <Route exact path="/" component={Home}/>
             <Route exact path="/about/" component={About}/>

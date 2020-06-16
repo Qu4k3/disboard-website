@@ -12,27 +12,27 @@ export default class GlobalNav extends Component {
         const aboutActive = location.pathname.match(/^\/about/) ? "current" : "";
 */
         return (        
-          <nav class="global-navi">
+          <nav className="global-navi">
                 <Helmet>
                 <script src="/path/to/resource.js" type="text/javascript" />
                 </Helmet>
                 <ul>
-                    <li class="li-home">
+                    {/*<li className="li-home">
                         <Link to={'/'}>
                             <p>HOME<br /><span>ホーム</span></p>
                         </Link>
-                    </li>
-                    <li class="li-wars">
+                    </li>*/}
+                    <li className="li-wars">
                         <Link to={'/wars/'}>
                             <p>WARS<br /><span>戦争</span></p>
                         </Link>
                     </li>
-                    <li class="li-players">
+                    <li className="li-players">
                         <Link to={'/players/'}>
                             <p>JUGADORES<br /><span>選手たち</span></p>
                         </Link>
                     </li>
-                    <li class="li-about">
+                    <li className="li-about">
                         <Link to={'/about/'}>
                             <p>EQUIPO<br /><span>チーム</span></p>
                         </Link>

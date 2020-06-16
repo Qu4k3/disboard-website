@@ -1,48 +1,92 @@
 import React, { Component } from 'react'
 import {Helmet} from 'react-helmet'
+import { Link } from 'react-router-dom'
 
 import SectionTile from '../components/SectionTitle'
+import PlayerCard from '../components/PlayerCard'
+
+import API from '../api'
 
 export class Players extends Component {
+    state = {
+        players: []
+    }
+    
+    componentDidMount() {
+    API.get(`players/`).then(res => {
+            this.setState({ players: res.data.players })
+        })
+    }
+
     render() {
         return (
-            <section class="contents">
+            <section className="contents">
                 <Helmet>
-                    <title>『 』 / Acerca del equipo</title>
-                    <meta name="description" content="Acerca del equipo" />
+                    <title>『 』 / Miembros del equipo</title>
+                    <meta name="description" content="Miembros del equipo" />
 
-                    <meta property="og:title" content="『 Disboard 』 / Acerca del equipo" />
-                    <meta property="og:description" content="Acerca del equipo" />
+                    <meta property="og:title" content="『 Disboard 』 / Miembros del equipo" />
+                    <meta property="og:description" content="Miembros del equipo" />
                 </Helmet>
                 <SectionTile title="JUGADORES" alt="選手たち" />
                 <article>
-                    <div class="heading">
+                    <div className="heading">
                         <h3>
                             <span>Staff</span>
                         </h3>
                     </div>
-                    <div class="detail flex-container">
+                    <div className="detail flex-container players-container">
 
+                        <Link className="player-card" to={'/player/Uy2sZ5ef'}>
+                            <PlayerCard
+                                avatarURL="https://www.gravatar.com/avatar/6dbbe4cca656c7058e9aedda61367dd0"
+                                country="es"
+                                name="Quake"
+                                tag="Quake#1470"
+                                in="06-09-2018"
+                                fc="6757-8638-3964"
+                            />
+                        </Link>
+                        <Link className="player-card" to={'/player/h15sqI4D'}>
+                            <PlayerCard
+                                avatarURL="https://www.mariokartcentral.com/forums/data/avatars/l/0/193.jpg"
+                                country="co"
+                                name="Caizer"
+                                tag="Caizer#6911"
+                                in="06-09-2018"
+                                fc="6317-9462-5122"
+                            />
+                        </Link>                    
                     </div>
-                    <div class="heading">
+                    <div className="heading">
                         <h3>
                             <span>Miembros</span>
                         </h3>
                     </div>
-                    <div class="detail">
-                    <div class="player">
-                        <img src="https://cdn.discordapp.com/avatars/147882388347682816/a_b11a0d5e0b55e1bfd7e76b6c606088d6.gif" alt="Quake" />
+                    <div className="detail flex-container players-container members">
+                    { this.state.players.map(player => 
+ 
+                        <Link key={player.player_id} className="player-card" to={'/player/'+player.player_id}>
+                                <PlayerCard
+                                    avatarURL={player.mkc_avatar_url}
+                                    country={player.country.code.toLowerCase()}
+                                    name={player.player_name}
+                                    tag={player.player_tag}
+                                    in={player.player_registry.in}
+                                    fc={player.switch_fc}
+                                />
+                            </Link>
+                        
+                    )}
                     </div>
-                    <div class="player"></div>
-                    </div>
-                    <div class="heading">
+                    {/*<div className="heading">
                         <h3>
                             <span>Allies</span>
                         </h3>
                     </div>
-                    <div class="detail">
+                    <div className="detail">
                         
-                    </div>
+                    </div>*/}
                 </article> 
             </section>
         );

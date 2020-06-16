@@ -10,17 +10,17 @@ export default class Header extends Component {
     render () {
         return (
             <header id="header">
-                <div class="inner">
-                    <section class="logo">
+                <div className="inner">
+                    <section className="logo">
                         <Link to={'/'}>
                             <img className="img-responsive" src={logo} alt="Disboard logo" />
                         </Link>
                     </section>
 
-                    <div class="global-navi-trigger sp-b"><span></span><span></span><span></span></div>
+                    <div className="global-navi-trigger sp-b"><span></span><span></span><span></span></div>
                     
-                    <section class="login text-btn">
-                        <a href="/">Login via Discord</a>
+                    <section className="login text-btn">
+                        <a href="https://api.disboard.team/discord/login">Login via Discord</a>
                     </section>
                     
                     <SocialNav />

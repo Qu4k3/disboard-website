@@ -67,9 +67,9 @@ header {
         list-style: none;
         position: relative;
 
-        &:first-child {
+        /*&:first-child {
           display: none;
-        }
+        }*/
 
         a {
           color: #fff;
@@ -118,7 +118,7 @@ header {
           margin: 0 0 0 60px;
         }
 
-        &:nth-child(n+3):before {
+        &:nth-child(n+2):before {
           content: "";
           width: 1px;
           height: 36px;

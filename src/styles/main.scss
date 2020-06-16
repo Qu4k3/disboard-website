@@ -1,4 +1,4 @@
-@import 'utils/variables';
+@import 'fonts/flag-icon.scss';
 
 @import 'base/color';
 @import 'base/typography';
@@ -12,8 +12,10 @@
 @import 'layout/forms';
 
 @import 'components/buttons';
-@import 'components/tables';
+@import 'components/meta';
+@import 'components/table';
 @import 'components/scrollbar';
+@import 'components/playerCard';
+@import 'components/playerProfile';
+@import 'components/teams';
 @import 'components/backToTop';
-
-@import 'pages/home';

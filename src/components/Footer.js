@@ -9,10 +9,10 @@ export default class Footer extends Component {
     render () {
         return (
         <footer id="footer">
-            <div class="inner">
+            <div className="inner">
                 <GlobalNav />
                 <SocialNav />
-                <p class="copyright">©2018-{year}／<br class="sp_b" />Disboard.team</p>
+                <p className="copyright">©2018-{year}／<br className="sp_b" />Disboard.team</p>
             </div>
         </footer>
         )

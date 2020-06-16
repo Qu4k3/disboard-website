@@ -18,3 +18,27 @@ body::-webkit-scrollbar-track {
 body::-webkit-scrollbar-track-piece {
   background-color: #050707;
 }
+
+
+
+
+.outer-team-list::-webkit-scrollbar {
+  width: 8px;
+  background-color: rgba(191, 19, 117, 0.6);
+}
+
+.outer-team-list::-webkit-scrollbar-corner {
+  background-color: rgba(191, 19, 117, 0.6);
+}
+
+.outer-team-list::-webkit-scrollbar-thumb {
+  background-color: rgba(191, 19, 117, 0.6);
+}
+
+.outer-team-list::-webkit-scrollbar-track {
+  background-color: #050707;
+}
+
+.outer-team-list::-webkit-scrollbar-track-piece {
+  background-color: #050707;
+}
