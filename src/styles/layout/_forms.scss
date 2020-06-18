@@ -39,6 +39,9 @@ form {
       color: #fff;
       padding-left: 5px;
       font-size: 14px;
+      &:focus {        
+        outline-color: $bg-color-elements;
+      }        
     }
   }
   button {

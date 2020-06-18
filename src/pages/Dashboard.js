@@ -57,7 +57,7 @@ export class Dashboard extends Component {
           <meta property="og:title" content="『 Disboard 』 / Dashboard" />
           <meta property="og:description" content="Dashboard" />
         </Helmet>
-        <SectionTitle title="Dashboard" />
+        <SectionTitle title="Dashboard" alt="ダッシュボード"/>
         <article>        
           <form onSubmit={this.handleSubmit}>
             <h3>New Team</h3>
