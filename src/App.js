@@ -7,6 +7,7 @@ import { Wars } from './pages/Wars';
 import { War } from './pages/War';
 import { Players } from './pages/Players';
 import { Player } from './pages/Player';
+import { Dashboard } from './pages/Dashboard';
 import { NotFound } from './pages/NotFound';
 import { BackToTop } from './components/BackToTop';
 
@@ -29,6 +30,7 @@ class App extends Component {
             <Route exact path="/war/:warId" component={War}/>
             <Route exact path="/players/" component={Players}/>
             <Route exact path="/player/:playerId" component={Player}/>
+            <Route exact path="/dashboard/" component={Dashboard}/>
             <Route component={NotFound} />
           </Switch>
         </main>
