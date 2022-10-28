@@ -1,8 +1,7 @@
-const withCSS = require('@zeit/next-css')
-const withImages = require('next-images')
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  reactStrictMode: true,
+  swcMinify: true,
+}
 
-module.exports = withImages(
-  withCSS({
-    target: 'serverless'
-  })
-)
+module.exports = nextConfig
